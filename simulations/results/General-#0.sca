@@ -1,0 +1,283 @@
+version 3
+run General-0-20260519-00:43:40-14034
+attr configname General
+attr datetime 20260519-00:43:40
+attr datetimef 20260519-004340
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network src.RingDragonfly16
+attr processid 14034
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network src.RingDragonfly16
+config sim-time-limit 20s
+
+par RingDragonfly16.node0.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node0.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node0.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerA.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerA.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node1.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node1.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node1.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA.out[1].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerA.out[1].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerA.out[1].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node2.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node2.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node2.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA.out[2].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerA.out[2].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerA.out[2].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node3.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node3.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node3.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA.out[3].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerA.out[3].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerA.out[3].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node4.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node4.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node4.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerB.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerB.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerB.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node5.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node5.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node5.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerB.out[1].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerB.out[1].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerB.out[1].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node6.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node6.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node6.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerB.out[2].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerB.out[2].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerB.out[2].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node7.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node7.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node7.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerB.out[3].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerB.out[3].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerB.out[3].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node8.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node8.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node8.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerC.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerC.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerC.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node9.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node9.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node9.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerC.out[1].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerC.out[1].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerC.out[1].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node10.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node10.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node10.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerC.out[2].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerC.out[2].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerC.out[2].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node11.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node11.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node11.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerC.out[3].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerC.out[3].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerC.out[3].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node12.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node12.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node12.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerD.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerD.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerD.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node13.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node13.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node13.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerD.out[1].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerD.out[1].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerD.out[1].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node14.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node14.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node14.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerD.out[2].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerD.out[2].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerD.out[2].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.node15.out[0].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.node15.out[0].channel disabled false
+attr mutable ""
+par RingDragonfly16.node15.out[0].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerD.out[3].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerD.out[3].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerD.out[3].channel delay 0.05s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA.out[4].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerA.out[4].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerA.out[4].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerB.out[4].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerB.out[4].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerB.out[4].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA.out[5].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerA.out[5].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerA.out[5].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerC.out[4].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerC.out[4].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerC.out[4].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerB.out[5].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerB.out[5].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerB.out[5].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerD.out[4].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerD.out[4].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerD.out[4].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerC.out[5].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerC.out[5].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerC.out[5].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerD.out[5].channel typename "\"ned.DelayChannel\""
+par RingDragonfly16.routerD.out[5].channel disabled false
+attr mutable ""
+par RingDragonfly16.routerD.out[5].channel delay 0.25s
+attr mutable ""
+attr unit s
+par RingDragonfly16.routerA typename "\"src.Router\""
+par RingDragonfly16.node0 typename "\"src.RingNode\""
+par RingDragonfly16.node1 typename "\"src.RingNode\""
+par RingDragonfly16.node2 typename "\"src.RingNode\""
+par RingDragonfly16.node3 typename "\"src.RingNode\""
+par RingDragonfly16.routerB typename "\"src.Router\""
+par RingDragonfly16.node4 typename "\"src.RingNode\""
+par RingDragonfly16.node5 typename "\"src.RingNode\""
+par RingDragonfly16.node6 typename "\"src.RingNode\""
+par RingDragonfly16.node7 typename "\"src.RingNode\""
+par RingDragonfly16.routerC typename "\"src.Router\""
+par RingDragonfly16.node8 typename "\"src.RingNode\""
+par RingDragonfly16.node9 typename "\"src.RingNode\""
+par RingDragonfly16.node10 typename "\"src.RingNode\""
+par RingDragonfly16.node11 typename "\"src.RingNode\""
+par RingDragonfly16.routerD typename "\"src.Router\""
+par RingDragonfly16.node12 typename "\"src.RingNode\""
+par RingDragonfly16.node13 typename "\"src.RingNode\""
+par RingDragonfly16.node14 typename "\"src.RingNode\""
+par RingDragonfly16.node15 typename "\"src.RingNode\""
+par RingDragonfly16 typename "\"src.RingDragonfly16\""
+
