@@ -31,7 +31,7 @@ parallel_processing/
 │   └── screenshots/
 │
 └── README.md
-
+```
 Implemented Algorithms
 Naive MPI_Allgather
 
