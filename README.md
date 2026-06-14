@@ -1,15 +1,27 @@
 # parallel_processing
-# MPI_Allgather Simulation on Dragonfly-Inspired Topology using OMNeT++
 
-This project presents the simulation of MPI_Allgather collective communication algorithms on Dragonfly-inspired network topologies using the OMNeT++ discrete event simulation framework.
+# MPI_Allgather Simulation on Dragonfly+ and Fat Tree Topologies using OMNeT++
 
-Both naive and ring-based communication approaches were implemented and evaluated on scalable hierarchical topologies consisting of 16 compute nodes and 4 interconnected routers.
+This project presents the simulation and evaluation of **MPI_Allgather collective communication algorithms** using the **OMNeT++ discrete event simulation framework**.
 
-The project focuses on packet-level communication behavior, routing strategies, latency analysis, and scalability characteristics in distributed systems.
+Two communication strategies were implemented and analyzed:
+
+* **Naive MPI_Allgather**
+* **Ring-Based MPI_Allgather**
+
+The simulations were performed on a **Dragonfly-inspired hierarchical topology** and extended with an **additional Fat Tree topology experiment** for performance comparison.
+
+The project focuses on:
+
+* Packet-level communication behavior
+* Routing strategies
+* Communication latency
+* Scalability analysis
+* Hierarchical network topology evaluation
 
 ---
 
-# Project Structure
+# Repository Structure
 
 ```text
 parallel_processing/
@@ -23,6 +35,12 @@ parallel_processing/
 │   ├── NaiveRouter.cc
 │   └── NaiveRouter.ned
 │
+├── fat_tree/
+│   ├── FatTree16.ned
+│   ├── Router.cc
+│   ├── RingNode.cc
+│   └── omnetpp.ini
+│
 ├── simulations/
 │   └── omnetpp.ini
 │
@@ -32,79 +50,169 @@ parallel_processing/
 │
 └── README.md
 ```
-Implemented Algorithms
-Naive MPI_Allgather
 
-The naive implementation directly forwards packets to multiple outgoing connections using broadcast-style routing. Although simple, this approach generates excessive packet duplication and communication overhead in large-scale systems.
+---
+
+# Implemented Algorithms
+
+## Naive MPI_Allgather
+
+The naive implementation forwards packets directly to multiple outgoing connections using a broadcast-style communication mechanism.
+
+Characteristics:
+
+* Simple implementation
+* High packet duplication
+* Increased communication overhead
+* Limited scalability
 
 Network:
 
+```text
 src.Dragonfly16
-Ring-Based MPI_Allgather
+```
 
-The ring-based implementation uses deterministic forwarding between neighboring nodes and routers in a logical ring structure. This method reduces unnecessary packet duplication and improves scalability.
+---
+
+## Ring-Based MPI_Allgather
+
+The ring-based implementation forwards packets sequentially through neighboring nodes and routers using deterministic routing behavior.
+
+Characteristics:
+
+* Reduced packet duplication
+* Improved communication efficiency
+* More scalable communication pattern
 
 Network:
 
+```text
 src.RingDragonfly16
-Topology Design
+```
 
-The implemented Dragonfly-inspired topology includes:
+---
 
-16 compute nodes
-4 hierarchical routers
-Local node-router links
-Global inter-router links
-Hierarchical packet forwarding
+# Additional Experiment — Fat Tree Topology
 
-The topology simulates scalable communication behavior in distributed high-performance computing systems.
+As an additional comparison experiment, MPI_Allgather communication was also evaluated using a simplified **Fat Tree topology**.
 
-Technologies Used
-OMNeT++
-C++
-Discrete Event Simulation
-Packet-Level Routing Simulation
-Performance Metrics
+Characteristics:
 
-The simulations analyze:
+* Hierarchical multi-level routing
+* Reduced processed event count
+* Alternative scalable communication structure
 
-Packet transmission count
-Packet reception count
-Communication latency
-Hop count
-Routing behavior
-Scalability characteristics
-Build Instructions
+Network:
 
-First load the OMNeT++ environment:
+```text
+src.FatTree16
+```
 
+---
+
+# Topology Design
+
+## Dragonfly+
+
+* 16 compute nodes
+* 4 hierarchical routers
+* Local node-router communication
+* Global router-router links
+
+## Fat Tree
+
+* 16 compute nodes
+* Core–Aggregation–Edge hierarchy
+* Hierarchical packet forwarding
+
+---
+
+# Technologies Used
+
+* OMNeT++
+* C++
+* Discrete Event Simulation
+* Packet-Level Routing
+* MPI Collective Communication
+
+---
+
+# Performance Metrics
+
+The simulations evaluate:
+
+* Packet transmission count
+* Packet reception count
+* Communication latency
+* Hop count
+* Routing behavior
+* Scalability characteristics
+
+---
+
+# Build Instructions
+
+Load OMNeT++:
+
+```bash
 cd ~/Downloads/omnetpp-6.4.0
+
 source setenv
+```
 
-Then build the project:
+Build project:
 
+```bash
 cd samples/DragonflyAllgather
 
-opp_makemake -f --deep -o DragonflyAllgather
-
 make MODE=debug
-Run Simulation
+```
+
+Run simulation:
+
+```bash
 cd simulations
 
 ../DragonflyAllgather_dbg -m -u Qtenv -n .. omnetpp.ini
-Example Results
+```
 
-Final ring-based simulation statistics:
+---
 
-Total Packets Sent: 960
-Total Packets Received: 192
-Average Latency: 0.35
-Simulation Time: 20s
+# Example Results
 
-The naive implementation generated significantly larger communication traffic due to packet duplication, while the ring-based implementation provided more scalable routing behavior.
+## Ring-Based Dragonfly+
 
-References
-MPI Standard Documentation
-OMNeT++ Simulation Framework
-Dragonfly Topology Research Papers
-High Performance Computing Communication Literature
+| Metric                 | Value |
+| ---------------------- | ----- |
+| Total Packets Sent     | 960   |
+| Total Packets Received | 192   |
+| Average Latency        | 0.35  |
+| Simulation Time        | 20 s  |
+
+## Additional Fat Tree Experiment
+
+| Metric            | Value      |
+| ----------------- | ---------- |
+| Processed Events  | 1724       |
+| Packet Completion | Successful |
+| Simulation Time   | 1 s        |
+
+---
+
+# Report
+
+Project report:
+
+```text
+rep/report.pdf
+```
+
+---
+
+# References
+
+1. MPI: A Message-Passing Interface Standard (MPI Forum)
+2. OMNeT++ Simulation Framework
+3. Dragonfly Topology Research
+4. High Performance Computing Communication Systems
+5. Interconnection Network Design Literature
