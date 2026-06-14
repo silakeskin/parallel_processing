@@ -202,10 +202,7 @@ cd simulations
 # Report
 
 Project report:
-
-```text
-rep/report.pdf
-```
+Tis repository also contains the project report.
 
 ---
 
